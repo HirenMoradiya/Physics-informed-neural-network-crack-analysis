@@ -1,0 +1,31 @@
+# input data for PINNs
+ck1 = 1             # subdomain (upper half)
+ck2 = 2             # subdomain (lower half)
+E	= 1.0           # young's modulus
+q	= 1.0           # traction / stress (sigma22)
+mu	= 0.3           # poisson's ratio
+a_crack = 1.0       # half-length of crack
+n_crack = 10        # number of crack element (must be integer)
+b = 2.0             # half width of plate
+h = 6.0             # half height of plate
+
+# mesh parameter for generating and refine mesh
+refine_ratio = 0.7
+refine_time = 1
+
+# PINNs parameter
+input_nodes = 2             # Number of Input nodes
+output_nodes = 2            # Number of Output nodes
+
+# activation function : relu, tanh, sigmoid, swish, leakyrelu, softplus, logsigmoid, elu, gelu, identity
+arch = [240, 'tanh', 200, 'tanh', 180, 'tanh', 140, 'tanh', 140, 'tanh', 100, 'tanh']
+
+learning_rate = 0.001
+epochs = 2500
+optimizer_switch_epoch = 1000
+
+# update name according to above parameter
+name = ep_2500_lr_0.001_epsw_1000_hino_240_200_180_140_140_100_actfn_tanh
+
+n_crack_SIF = 7            # the number of point at SIF calculate
+
