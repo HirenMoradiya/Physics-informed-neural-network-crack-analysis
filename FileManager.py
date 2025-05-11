@@ -307,8 +307,8 @@ class FileManager:
     def plot_sif(self, r_kk, SIF_num, x_i, SIF_1_new):
         plt.plot(r_kk, SIF_num, 'b-o', label = 'SIF (numerical)')
         plt.plot(x_i, SIF_1_new, 'r--', label = 'SIF (extrapolated)')
-        plt.xlabel('SIF')
-        plt.ylabel('Distance from crack tip (r/a)')
+        plt.ylabel('SIF')
+        plt.xlabel('Distance from crack tip (r/a)')
         plt.title("Stress Intensity Factor")
         plt.legend()
         plt.savefig(os.path.join(self.output_dir, 'SIF_result.png'))
